@@ -9,9 +9,10 @@ function getRandomHexColor() {
 // const widget = document.querySelector(".widget");
 const color = document.querySelector(".color");
 const changeColor = document.querySelector(".change-color");
-const dodyColor = document.querySelector("body");
+const dodyColor = document.body;
 
 changeColor.addEventListener("click", () => {
-    dodyColor.style.backgroundColor = getRandomHexColor();
-    color.textContent = getRandomHexColor();
+    const randomColor = getRandomHexColor();
+    dodyColor.style.backgroundColor = randomColor;
+    color.textContent = randomColor;
 });
